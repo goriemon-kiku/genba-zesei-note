@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新規登録 | 現場是正ノート</title>
+</head>
+<body>
+  <h1>新規登録</h1>
+
+  <form id="signup-form">
+    <label>名前 <input type="text" id="name" required></label><br>
+    <label>メールアドレス <input type="email" id="email" required></label><br>
+    <label>パスワード（6文字以上） <input type="password" id="password" minlength="6" required></label><br>
+    <button type="submit">登録する</button>
+  </form>
+
+  <p id="message"></p>
+  <p><a href="login.html">ログインはこちら</a></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/signup.js"></script>
+</body>
+</html>
