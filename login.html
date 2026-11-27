@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ログイン | 現場是正ノート</title>
+</head>
+<body>
+  <h1>ログイン</h1>
+
+  <form id="login-form">
+    <label>メールアドレス <input type="email" id="email" required></label><br>
+    <label>パスワード <input type="password" id="password" required></label><br>
+    <button type="submit">ログイン</button>
+  </form>
+
+  <p id="message"></p>
+  <p><a href="signup.html">新規登録はこちら</a></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

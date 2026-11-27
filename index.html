@@ -4,79 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>現場是正ノート</title>
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>現場是正ノート</h1>
-  </header>
+  <h1>現場是正ノート</h1>
+  <p><span id="user-name"></span> <button id="logout-button">ログアウト</button></p>
+  <p>ここに現場の一覧が表示される予定です。</p>
 
-  <main>
-    <!-- ① 現場を選ぶ（是正項目の入れ物） -->
-    <section class="card">
-      <h2>現場</h2>
-      <label>
-        表示する現場
-        <select id="site-select"></select>
-      </label>
-
-      <details>
-        <summary>＋ 新しい現場を登録</summary>
-        <form id="site-form">
-          <label>
-            現場名（必須）
-            <input type="text" id="site-name" required placeholder="例：〇〇ビル新築工事">
-          </label>
-          <label>
-            住所
-            <input type="text" id="site-address" placeholder="例：名古屋市中区〇〇">
-          </label>
-          <button type="submit">現場を登録</button>
-        </form>
-      </details>
-    </section>
-
-    <!-- ② 是正項目の登録・編集フォーム（Create / Update） -->
-    <section class="card">
-      <h2 id="form-title">是正項目を登録</h2>
-      <form id="correction-form">
-        <label>
-          指摘内容（必須）
-          <input type="text" id="c-title" required placeholder="例：2F手すり 固定ボルト緩み">
-        </label>
-        <label>
-          詳細・是正方法
-          <textarea id="c-detail" rows="3" placeholder="例：ボルトを増し締めし、写真で報告"></textarea>
-        </label>
-        <div class="row">
-          <label>
-            是正期限
-            <input type="date" id="c-due">
-          </label>
-          <label>
-            状態
-            <select id="c-status">
-              <option value="未対応">未対応</option>
-              <option value="対応中">対応中</option>
-              <option value="完了">完了</option>
-            </select>
-          </label>
-        </div>
-        <button type="submit" id="c-submit">登録する</button>
-        <button type="button" id="c-cancel" class="secondary" hidden>編集をやめる</button>
-      </form>
-      <p id="message"></p>
-    </section>
-
-    <!-- ③ 是正項目の一覧（Read / Update / Delete） -->
-    <section class="card">
-      <h2>是正項目一覧</h2>
-      <ul id="correction-list"></ul>
-    </section>
-  </main>
-
-  <!-- Supabase を使うためのライブラリ -->
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
-  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/index.js"></script>
 </body>
 </html>
