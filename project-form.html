@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>現場を登録 | 現場是正ノート</title>
+</head>
+<body>
+  <h1>現場を登録</h1>
+
+  <form id="project-form">
+    <label>現場名（必須） <input type="text" id="name" required maxlength="50"></label><br>
+    <label>住所 <input type="text" id="address"></label><br>
+    <button type="submit">保存する</button>
+    <a href="index.html">キャンセル</a>
+  </form>
+
+  <p id="message"></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/project-form.js"></script>
+</body>
+</html>
